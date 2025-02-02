@@ -33,11 +33,20 @@
   padding: 10px 20px;
   border-radius: 10px;
   font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Hover Effect */
 .nav-links li a:hover {
   color: #FFD700;
   background-color: #1f1e1e;
+}
+
+/* 🔥 Active Link Styling */
+.nav-links li a.active {
+  color: #FFD700;
+  background-color: #1f1e1e;
+  font-weight: bold;
 }
 
 /* Login Button */
@@ -50,6 +59,7 @@
   font-size: 18px;
   border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .login-button:hover {
@@ -59,26 +69,31 @@
 /* 🔥 Responsive for Screens 800px or Smaller */
 @media (max-width: 800px) {
   .navbar {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     align-items: center;
     padding: 20px;
   }
 
   .logo {
-    margin-bottom: 10px; /* Add space between logo and links */
+    margin-bottom: 10px;
   }
 
   .nav-links {
     flex-direction: column;
-    gap: 10px; /* Reduce spacing */
+    gap: 10px;
     width: 100%;
+    text-align: center; /* 🔥 Ensures alignment */
   }
 
   .nav-links li {
     width: 100%;
   }
 
+  .nav-links li a {
+    display: block; /* 🔥 Makes links full-width */
+  }
+
   .login-button {
-    margin-top: 10px; /* Add space below nav links */
+    margin-top: 10px;
   }
 }

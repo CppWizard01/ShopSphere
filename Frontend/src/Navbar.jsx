@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -6,10 +7,38 @@ function Navbar() {
       <div className="logo">ShopSphere</div>
 
       <ul className="nav-links">
-        <li className="nav-item"><a href="/">Home</a></li>
-        <li className="nav-item"><a href="/">Products</a></li>
-        <li className="nav-item"><a href="/">About</a></li>
-        <li className="nav-item"><a href="/">Contact</a></li>
+        <li className="nav-item">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Home
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to="/products"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Products
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            About
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Contact
+          </NavLink>
+        </li>
       </ul>
 
       <div className="login">
